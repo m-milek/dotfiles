@@ -68,8 +68,10 @@ alias leszmak='im2a -p ~/Downloads/leszmak.jpg'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
 alias cowsay='cowsay -f sodomized'
-alias extendhdmi='xrandr --output HDMI-A-0 --mode 1920x1080 && xrandr --output eDP --left-of HDMI-A-0 && xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144.00'
+alias extendhdmi='xrandr --output HDMI-A-0 --mode 1920x1080 && xrandr --output eDP --left-of HDMI-A-0 && xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144.00 && nitrogen --restore'
+alias prep='rm -f test.results average && cargo build && autotest 2 && cat average'
 #xset b off
+
 
 ## CUSTOM FUNCTIONS
 
