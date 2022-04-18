@@ -5,7 +5,8 @@ modi: "window,drun,run,ssh";
 width: 900;
 lines: 1;
 columns: 2;
-font: "Open Sans 11";
+/*  font: "Open Sans 11"; */
+font: "Source Code Pro";
 bw: 1;
 /*	location: 0;*/
 /*	padding: 5;*/

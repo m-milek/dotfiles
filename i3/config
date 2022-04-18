@@ -142,6 +142,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+assign [class="Hangman"] $ws9
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -207,3 +209,7 @@ exec_always xset b off
 
 for_window [class="Gnome-terminal"] floating enable
 for_window [class="gnome-terminal-server"] floating enable
+
+for_window [class="Hangman"] floating enable
+for_window [class="Hangman"] floating_minimum_size 1000 x 1000
+for_window [class="Hangman"] floating_maximum_size 1000 x 1000
