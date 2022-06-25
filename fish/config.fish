@@ -3,7 +3,8 @@ if status is-interactive
 end
 
 #general settings
-set fish_greeting #supressess the default fish greeting
+set fish_greeting
+#supressess the default fish greeting
 
 #"nvim" as manpager
 #set -x MANPAGER "nvim -c 'set ft=man' -"
@@ -60,9 +61,8 @@ alias rm='rm -i'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias brightness='brightnessctl set'
 alias br='brightnessctl set'
-alias unixlab='ssh inf151824@unixlab.cs.put.poznan.pl'
-alias dec2bin='$HOME/Programming/C_Projects/dec2bin/dec2bin'
-alias bin2dec='$HOME/Programming/C_Projects/bin2dec/bin2dec'
+#alias dec2bin='$HOME/Programming/C/dec2bin/dec2bin'
+#alias bin2dec='$HOME/Programming/C/bin2dec/bin2dec'
 alias lvim='/home/michal/.local/bin/lvim'
 alias leszmak='im2a -p ~/Downloads/leszmak.jpg'
 alias ..='cd ..'
@@ -70,17 +70,18 @@ alias ...='cd .. && cd ..'
 alias cowsay='cowsay -f sodomized'
 alias extendhdmi='xrandr --output HDMI-A-0 --mode 1920x1080 && xrandr --output eDP --left-of HDMI-A-0 && xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144.00 && nitrogen --restore'
 alias prep='rm -f test.results average && cargo build && autotest 2 && cat average'
+alias ghc='ghc -dynamic'
+alias pro='cd /home/michal/Programming/'
 #xset b off
-
 
 ## CUSTOM FUNCTIONS
 
 function yt-downloader
-    $HOME/Programming/Python_Projects/yt-downloader/yt-downloader.py
+    $HOME/Programming/Python/yt-downloader/yt-downloader.py
 end
 
 function pomodoro-cli
-    $HOME/Programming/Python_Projects/pomodoro-cli/pomodorocli.py
+    $HOME/Programming/Python/pomodoro-cli/pomodorocli.py
 end
 
 function texnote
@@ -104,9 +105,9 @@ function autotest
     echo "Done"
 end
 
-alias upscale-cli='$HOME/Programming/Python_Projects/upscale-cli/upscale_launcher.sh'
+alias upscale-cli='$HOME/Programming/Python/upscale-cli/upscale_launcher.sh'
 
-fish_add_path --path /home/michal/.local/bin/lvim
+fish_add_path --path /home/michal/.local/bin/lvim /home/michal/.cargo/bin
 
 
 # Start X at login
@@ -114,5 +115,7 @@ if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
         exec startx -- -keeptty
         xinput set-prop "MSFT0004:00 06CB:CD98 Touchpad" "libinput Tapping Enabled" 1
+        rmdir /home/michal/Desktop
     end
 end
+
