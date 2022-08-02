@@ -14,9 +14,9 @@ if ! updates_aur=$(yay -Qum 2> /dev/null | wc -l); then
 fi
 
 updates=$((updates_arch + updates_aur))
-
-if [ "$updates" -gt 3 ]; then
-    echo "update"
-else
-    echo ""
-fi
+echo $updates
+#if [ "$updates" -gt 3 ]; then
+#    echo $updates
+#else
+#    echo "No updates":
+#fi

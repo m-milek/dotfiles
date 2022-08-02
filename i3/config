@@ -207,6 +207,13 @@ exec_always xinput set-prop "MSFT0004:00 06CB:CD98 Touchpad" "libinput Tapping E
 
 exec_always xset b off
 
+#launch the emacs server
+exec_always /usr/bin/emacs --daemon
+
+#change keybinds
+exec_always /usr/bin/xmodmap /home/michal/.Xmodmap
+# placeholder
+
 for_window [class="Gnome-terminal"] floating enable
 for_window [class="gnome-terminal-server"] floating enable
 
